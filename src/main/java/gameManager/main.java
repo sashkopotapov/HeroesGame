@@ -14,6 +14,7 @@ public class main {
 
     }
     static void fight(Character a, Character b){
+        System.out.println("Let the battle begin!");
         while(true){
             a.kick(b);
             System.out.println(b.toString());

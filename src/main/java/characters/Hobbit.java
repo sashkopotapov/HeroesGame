@@ -9,8 +9,13 @@ public class Hobbit extends Character{
     }
 
     public void kick(Character character) {
+
         System.out.println("Hobbit does not fight with " + character.getClassName());
-        toCry();
+        if(character.getClassName().equals("Hobbit")){
+            System.out.println("Hobbits make deal and first pretends to be dead");
+            character.setHp(0);
+        }
+        else{ toCry();}
     }
 
 }

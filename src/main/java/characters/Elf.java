@@ -5,8 +5,12 @@ public class Elf extends Character{
         super(10, 10);
     }
     public void kick(Character character) {
+        if(character.getClassName().equals("Elf")){
+            System.out.println("Elfs don`t fight with each other. First sacrifices himself in the name of the Queen");
+            character.setHp(0);
+        }
 
-        if(this.getPower() > character.getPower()){
+        else if(this.getPower() > character.getPower()){
             System.out.println("Elf kills " + character.getClassName());
             character.setHp(0);
         }
